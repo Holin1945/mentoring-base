@@ -16,6 +16,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { IUser } from '../../../Interfaces/user.interface';
 import { TooltipEditDirective } from '../../../directives/tooltip-edit.directive';
+import { TooltipDeleteDirective } from '../../../directives/tooltip-delete.directive';
 
 @Component({
   selector: 'app-edit-user-dialog',
@@ -30,6 +31,7 @@ import { TooltipEditDirective } from '../../../directives/tooltip-edit.directive
     MatFormFieldModule,
     MatDialogClose,
     TooltipEditDirective,
+    TooltipDeleteDirective
   ],
 })
 export class EditUserDialogComponent {

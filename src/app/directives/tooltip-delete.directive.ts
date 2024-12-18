@@ -1,11 +1,11 @@
 import { Directive, ElementRef, Input, OnInit, Renderer2 } from '@angular/core';
 
 @Directive({
-  selector: '[editTooltip]',
+  selector: '[deleteTooltip]',
   standalone: true,
 })
-export class TooltipEditDirective implements OnInit {
-  @Input() editTooltip = '';
+export class TooltipDeleteDirective implements OnInit {
+  @Input() deleteTooltip = '';
 
   wrapper: HTMLDivElement = this.renderer.createElement('div');
   tooltip: HTMLDivElement = this.renderer.createElement('div');
@@ -15,11 +15,11 @@ export class TooltipEditDirective implements OnInit {
     private renderer: Renderer2
   ) {}
   ngOnInit(): void {
-    console.log(this.host, this.editTooltip);
+    console.log(this.host, this.deleteTooltip);
     this.renderer.setAttribute(
       this.host.nativeElement,
       'title',
-      this.editTooltip
+      this.deleteTooltip
     );
   }
 }
